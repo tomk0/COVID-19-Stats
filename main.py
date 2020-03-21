@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import matplotlib as mp
+import matplotlib.pyplot as plt
 
 
 def main():
@@ -9,7 +9,10 @@ def main():
     uk = full_data.loc[full_data['location'] == 'United Kingdom']
     italy = full_data.loc[full_data['location'] == 'Italy']
 
-
+    plt.plot(china['date'], china['total_cases'], color='red')
+    plt.plot(uk['date'], uk['total_cases'], color='blue')
+    plt.plot(italy['date'], italy['total_cases'], color='green')
+    plt.show()
 
 
 if __name__ == "__main__":
